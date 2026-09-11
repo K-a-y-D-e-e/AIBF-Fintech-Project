@@ -1,0 +1,33 @@
+# AI FinTech Suite - Configuration
+
+app:
+  name: "AI FinTech Suite"
+  version: "1.0.0"
+  port: 5000
+
+paths:
+  dataset_dir: "dataset"
+  credit_model: "config/credit_model.joblib"
+  fraud_model: "config/fraud_model.joblib"
+  fraud_scaler: "config/fraud_scaler.joblib"
+  expense_model: "config/expense_model.joblib"
+
+models:
+  credit_scoring:
+    n_estimators: 200
+    max_depth: 8
+    reject_threshold: 0.6
+    review_threshold: 0.4
+
+  fraud_detection:
+    n_estimators: 200
+    contamination: 0.03
+
+  expense_categorizer:
+    ngram_range: [1, 2]
+
+robo_advisor:
+  risk_bands:
+    conservative_max: 30
+    moderate_max: 55
+    growth_max: 80

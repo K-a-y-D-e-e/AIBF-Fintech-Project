@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+env/
+.venv/
+
+# Trained model artifacts (regenerate via training scripts / Docker build)
+config/*.joblib
+
+# Generated datasets (regenerate via src/utils/data_generator.py)
+dataset/*.csv
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Test cache
+.pytest_cache/
